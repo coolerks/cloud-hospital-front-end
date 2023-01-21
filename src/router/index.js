@@ -130,6 +130,43 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
+    path: '/hospSet',
+    component: Layout,
+    alwaysShow: true,
+    meta: {
+      title: '医院设置管理',
+      icon: 'el-icon-s-shop'
+    },
+    redirect: '/hospSet/list',
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/hospset/list.vue'),
+        meta: {
+          title: '医院设置列表',
+          icon: 'el-icon-s-shop'
+        }
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/hospset/add.vue'),
+        meta: {
+          title: '医院设置添加',
+          icon: 'el-icon-s-shop'
+        }
+      },
+      {
+        path: 'update/:id',
+        component: () => import('@/views/hospset/add.vue'),
+        meta: {
+          title: '医院设置更新',
+          icon: 'el-icon-s-shop'
+        },
+        hidden: true
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',

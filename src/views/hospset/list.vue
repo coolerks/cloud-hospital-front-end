@@ -102,6 +102,7 @@
 
 <script>
 import { getList, deleteHospital, deleteBatch, lockOrUnlock } from '@/api/hospset'
+import { getDictById } from '@/api/dict'
 
 export default {
     name: 'Index',
@@ -121,6 +122,7 @@ export default {
     },
     async created() {
         await this.load(1, this.pages.pageSize, this.data)
+        // console.log(await getDictById(86))
     },
     methods: {
         async load(now, size, data) {

@@ -187,6 +187,26 @@ export const asyncRoutes = [
         ]
     },
     {
+        path: '/hospital',
+        component: Layout,
+        alwaysShow: true,
+        meta: {
+            title: '医院列表',
+            icon: 'table'
+        },
+        redirect: '/hospital/list',
+        children: [
+            {
+                path: 'list',
+                component: () => import('@/views/hospital/list.vue'),
+                meta: {
+                    title: '数据字典',
+                    icon: 'table'
+                }
+            }
+        ]
+    },
+    {
         path: '/permission',
         component: Layout,
         redirect: '/permission/page',

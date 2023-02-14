@@ -6,3 +6,15 @@ export let getAllHospital = (page, size) => {
         method: 'get'
     })
 }
+export let changeHospitalStatus = (id, status) => {
+    return requestUtil({
+        url: `/hospital/admin/hosp/hospital/status/${id}/${status}`,
+        method: 'get'
+    })
+}
+export let getHospital = (id) => {
+    return requestUtil({
+        url: `/hospital/admin/hosp/hospital/${id}`,
+        method: 'get'
+    })
+}

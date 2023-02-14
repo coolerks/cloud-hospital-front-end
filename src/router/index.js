@@ -200,9 +200,27 @@ export const asyncRoutes = [
                 path: 'list',
                 component: () => import('@/views/hospital/list.vue'),
                 meta: {
-                    title: '数据字典',
+                    title: '列表',
                     icon: 'table'
                 }
+            },
+            {
+                path: "detail/:id",
+                component: () => import('@/views/hospital/detail.vue'),
+                meta: {
+                    title: '医院详情',
+                    icon: 'table'
+                },
+                hidden: true
+            },
+            {
+                path: "department/:id",
+                component: () => import('@/views/hospital/department.vue'),
+                meta: {
+                    title: '排班详情',
+                    icon: 'table'
+                },
+                hidden: true
             }
         ]
     },
